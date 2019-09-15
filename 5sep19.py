@@ -7,17 +7,14 @@ class ListNode(object):
 class Solution:
     def addTwoNumbers(self, l1, l2, c=0):
         
-        nodel1=l1 
-        nodel2=l2
+        nodel1 , nodel2= l1 , l2
         nodel3=ListNode(nodel1.val+nodel2.val)
         result=nodel3
         print(nodel1.val, nodel2.val, nodel3.val)
 
         while (nodel1.next !=None and nodel2.next !=None):
             nodel3.next=ListNode(nodel1.next.val+nodel2.next.val)
-            nodel1=nodel1.next
-            nodel2=nodel2.next
-            nodel3=nodel3.next
+            nodel1, nodel2, nodel3=nodel1.next , nodel2.next ,nodel3.next
             print(nodel1.val, nodel2.val, nodel3.val)
         return result 
 
