@@ -13,20 +13,21 @@ class ListNode(object):
         print(output)
 
     def reverseIteratively(self, head):
+
         prevnode = None
         node = head
         nextnode = node.next
         node.next=prevnode
 
         while nextnode != None:
-
             prevnode = node
             node = nextnode 
             nextnode = node.next
             node.next=prevnode
 
     def reverseRecursively(self, head):
-        print(head)
+        print('whatever')
+
 
 
 # Test Program
@@ -47,9 +48,6 @@ testHead.printList()
 testHead.reverseIteratively(testHead)
 print('----')
 # testHead.reverseRecursively(testHead)
-print(node1.val, node1.next.val)
-print(node2.val, node2.next.val)
-print(node3.val, node3.next.val)
 print("List after reversal: ")
 testTail.printList()
 # 0 1 2 3 4
